@@ -16,6 +16,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        workers=workers.workers:start_workers
+        workers=queue_mfc_manager.workers.workers:start_workers
     ''',
 )

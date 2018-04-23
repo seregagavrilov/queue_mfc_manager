@@ -1,2 +1,9 @@
-from manager import add_to_q
-from .workers import workers
+# from manager import QManager
+# from redis import Redis
+#
+#
+# my_redis = Redis()
+# manager = QManager(my_redis)
+
+
+

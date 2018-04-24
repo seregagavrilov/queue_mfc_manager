@@ -16,8 +16,7 @@ or install through PIP:
 ```
 pip install queue_mfc_manager
 ```
-
-##Using                    
+## Using                    
 for using takes create file name "manager" and create two necessary instance: "redis" and "manager".
                   
 ```
@@ -31,5 +30,9 @@ manager.add_to_queue(foo, ['a', 1, 'b', 2, 'c', 3])
 manager.add_to_queue(bar, ['a', 1, 'b', 2], name='Name')
 manager.add_to_queue(say_name, ['name', 'Sergey', 'sourname', 'Gavrilov'])
 ```
-##Launch workers
-For launch workers 
+## Launch workers
+For launch workers you need write comand with nomber of workers who will complete your jobs:
+```
+ workers 4
+```
+And that's all! Enjoy!

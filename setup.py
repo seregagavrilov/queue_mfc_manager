@@ -5,7 +5,7 @@ setup(
     name='queue_mfc_manager',
     description='Simple queue manager for me and you!',
     author='Sergey Gavrilov',
-    version='0.1',
+    version='0.2',
     url='https://github.com/seregagavrilov/queue_mfc_manager',
     packages=find_packages(),
     include_package_data=True,

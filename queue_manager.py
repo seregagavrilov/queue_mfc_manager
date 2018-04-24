@@ -29,15 +29,9 @@ class QManager():
         return json
 
 
-    def complete_tasks(self, all_tasks=True):
-        if all_tasks:
-            pass
-
-
     def add_to_qvstorage(self, function_name, json, kvstor):
         kvstor.rpush(function_name, json)
 
 
     def take_from_qvstorage(self, function_name, kvstor):
         return kvstor.lpop(function_name)
-

@@ -30,8 +30,8 @@ class QManager():
 
 
     def add_to_qvstorage(self, function_name, json, kvstor):
-        kvstor.rpush(function_name, json)
+        kvstor.lpush(function_name, json)
 
 
     def take_from_qvstorage(self, function_name, kvstor):
-        return kvstor.lpop(function_name)
+        return kvstor.rpop(function_name)

@@ -1,4 +1,4 @@
-from tasks import foo, bar, say_name
+from tasks_example import foo, bar, say_name
 from queue_manager import QManager
 from redis import Redis
 

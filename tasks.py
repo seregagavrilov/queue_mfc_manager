@@ -7,5 +7,5 @@ def bar(a, b, *args, **kvargs):
     return print(a * b)
 
 
-def my_func(name, sourname):
+def say_name(name, sourname):
     return print(name+' '+sourname)

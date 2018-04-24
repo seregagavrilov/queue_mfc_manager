@@ -12,7 +12,7 @@ class InstanceForJSON():
 class QManager():
     def __init__(self, kvstorage):
         self.redis_storage = kvstorage
-        self.jobs_for_workers = {}
+        self.tasks_for_workers = {}
 
 
     def add_to_queue(self, function, *args, **kwargs):
@@ -21,7 +21,7 @@ class QManager():
         except:
             positional_args =[]
         instance = InstanceForJSON(function.__name__, positional_args =positional_args, named_arguments=kwargs)
-        self.jobs_for_workers[function.__name__] = function
+        self.tasks_for_workers[function.__name__] = function
         json = self.serialize_to_json(instance)
         self.add_to_qvstorage(function.__name__, json, self.redis_storage)
 

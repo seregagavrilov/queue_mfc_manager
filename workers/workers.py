@@ -10,7 +10,7 @@ keys_from_redis = [key.decode() for key in my_redis.keys()]
 
 @click.command()
 def start_workers(count_workers=1):
-    for i in range(count_workers):
+    for count in range(count_workers):
         thread = threading.Thread(target=process_tasks, args=(condition,))
         thread.start()
 
@@ -49,7 +49,3 @@ def argument_list_to_dict(list_args):
     i = iter(list_args)
     return dict(zip(i, i))
 
-
-
-if __name__  == '__main__':
-    start_workers()

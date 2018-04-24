@@ -1,6 +1,4 @@
-import inspect
-from json_tricks import dumps, loads
-from redis import Redis
+from json_tricks import dumps
 
 
 class InstanceForJSON():
@@ -12,7 +10,7 @@ class InstanceForJSON():
 class QManager():
     def __init__(self, kvstorage):
         self.redis_storage = kvstorage
-        self.tasks_for_workers = {}
+        self.task_for_workers = {}
 
 
     def add_to_queue(self, function, *args, **kwargs):
@@ -21,7 +19,7 @@ class QManager():
         except:
             positional_args =[]
         instance = InstanceForJSON(function.__name__, positional_args =positional_args, named_arguments=kwargs)
-        self.tasks_for_workers[function.__name__] = function
+        self.task_for_workers[function.__name__] = function
         json = self.serialize_to_json(instance)
         self.add_to_qvstorage(function.__name__, json, self.redis_storage)
 

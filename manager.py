@@ -1,43 +1,13 @@
-from json_tricks import dumps
+from tasks import foo, bar, say_name
+from queue_manager import QManager
+from redis import Redis
 
 
-class InstanceForJSON():
-    def __init__(self, name, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+redis = Redis()
+manager = QManager(redis)
+manager.add_to_queue(foo, ['a', 1, 'b', 2, 'c', 3])
+manager.add_to_queue(bar, ['a', 1, 'b', 2], name='Name')
+manager.add_to_queue(say_name, ['name', 'Sergey', 'sourname', 'Gavrilov'])
 
 
-class QManager():
-    def __init__(self, kvstorage):
-        self.redis_storage = kvstorage
-        self.task_for_workers = {}
-
-
-    def add_to_queue(self, function, *args, **kwargs):
-        try:
-            positional_args = args[0]
-        except:
-            positional_args =[]
-        instance = InstanceForJSON(function.__name__, positional_args =positional_args, named_arguments=kwargs)
-        self.task_for_workers[function.__name__] = function
-        json = self.serialize_to_json(instance)
-        self.add_to_qvstorage(function.__name__, json, self.redis_storage)
-
-
-    def serialize_to_json(self, instance_to_json):
-        json = dumps(instance_to_json, indent=4)
-        return json
-
-
-    def complete_tasks(self, all_tasks=True):
-        if all_tasks:
-            pass
-
-
-    def add_to_qvstorage(self, function_name, json, kvstor):
-        kvstor.rpush(function_name, json)
-
-
-    def take_from_qvstorage(self, function_name, kvstor):
-        return kvstor.lpop(function_name)
 

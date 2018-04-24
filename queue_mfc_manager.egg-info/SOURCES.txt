@@ -1,3 +1,6 @@
+README.md
+setup.cfg
+setup.py
 queue_mfc_manager.egg-info/PKG-INFO
 queue_mfc_manager.egg-info/SOURCES.txt
 queue_mfc_manager.egg-info/dependency_links.txt

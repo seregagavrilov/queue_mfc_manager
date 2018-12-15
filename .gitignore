@@ -5,3 +5,4 @@ __pycache__/
 dist/
 queue_mfc.egg-info/
 queue_mfc_manager.egg-info/
+setup.py

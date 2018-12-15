@@ -2,3 +2,6 @@ mngq/
 *.rdb
 .DS_Store
 __pycache__/
+dist/
+queue_mfc.egg-info/
+queue_mfc_manager.egg-info/

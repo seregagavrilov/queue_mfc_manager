@@ -1,4 +1,5 @@
 README.md
+queue_manager.py
 setup.cfg
 setup.py
 queue_mfc_manager.egg-info/PKG-INFO

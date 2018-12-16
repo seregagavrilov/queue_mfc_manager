@@ -3,6 +3,12 @@ mngq/
 .DS_Store
 __pycache__/
 dist/
-queue_mfc.egg-info/
-queue_mfc_manager.egg-info/
-setup.py
+# Compiled python modules.
+*.pyc
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+/*.egg

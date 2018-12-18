@@ -5,13 +5,7 @@ Simple queue manger for Redis.
 
 ## Install
 
-For install manager you need whether to clone this repositori:
-
-```
-git clone https://github.com/seregagavrilov/queue_mfc_manager
-```
-
-or use pip:
+Use pip:
 
 ```
 pip install queue_mfc_manager

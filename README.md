@@ -1,6 +1,6 @@
 # README 
 
-Simple queue manger for Radis.
+Simple queue manger for Redis.
 
 
 ## Install

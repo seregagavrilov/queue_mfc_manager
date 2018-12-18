@@ -16,7 +16,7 @@ or use pip:
 ```
 pip install queue_mfc_manager
 ```
-## Usin                   
+## Use                   
 You should create file name manager.py and create two necessary instance: "redis" and "manager". 
 Then you sholud add tasks to manager.
                   

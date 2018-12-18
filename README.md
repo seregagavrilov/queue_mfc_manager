@@ -1,6 +1,6 @@
 # README 
 
-Simple queue manger for Redis.
+Simple queue manager for Redis.
 
 
 ## Install

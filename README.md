@@ -34,7 +34,7 @@ manager.add_to_queue(say_name, ['name', 'Sergey', 'sourname', 'Gavrilov'])
 ## Run workers
 For run workers you need write comand with nomber of workers who will complete your jobs:
 ```
- workers 4
+ workers <number of workers>
 ```
 If you need delete queue from manager use:
 ```

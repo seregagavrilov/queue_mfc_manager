@@ -1,3 +1,0 @@
-queue_manager
-worker_helpers
-workers

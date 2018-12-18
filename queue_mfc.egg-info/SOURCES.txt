@@ -1,6 +1,0 @@
-queue_mfc.egg-info/PKG-INFO
-queue_mfc.egg-info/SOURCES.txt
-queue_mfc.egg-info/dependency_links.txt
-queue_mfc.egg-info/entry_points.txt
-queue_mfc.egg-info/requires.txt
-queue_mfc.egg-info/top_level.txt

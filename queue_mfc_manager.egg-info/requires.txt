@@ -1,3 +1,0 @@
-Click==6.7
-Redis==2.10.6
-json-tricks==3.11.3

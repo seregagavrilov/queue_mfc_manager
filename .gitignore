@@ -3,6 +3,7 @@ mngq/
 .DS_Store
 __pycache__/
 dist/
+*.cfg
 # Compiled python modules.
 *.pyc
 

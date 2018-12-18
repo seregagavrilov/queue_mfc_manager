@@ -1,5 +1,3 @@
 click==6.7
 json-tricks==3.11.3
--e git+https://github.com/seregagavrilov/queue_mfc_manager.git@faab3322e97da50d83358ce66e89c7585a86318b#egg=queue_mfc
--e git+https://github.com/seregagavrilov/queue_mfc_manager.git@faab3322e97da50d83358ce66e89c7585a86318b#egg=queue_mfc_manager
 redis==2.10.6

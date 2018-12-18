@@ -1,23 +1,24 @@
 # README 
 
-Introduce simple manager for manage queue fundamental on Radis.
+Simple queue manger for Radis.
 
 
-## Installing
+## Install
 
-For install this manager you need whether to clone this repositori:
+For install manager you need whether to clone this repositori:
 
 ```
 git clone https://github.com/seregagavrilov/queue_mfc_manager
 ```
 
-or install through PIP:
+or use pip:
 
 ```
 pip install queue_mfc_manager
 ```
-## Using                    
-for using takes create file name "manager" and create two necessary instance: "redis" and "manager".
+## Usin                   
+You should create file name manager.py and create two necessary instance: "redis" and "manager". 
+Then you sholud add tasks to manager.
                   
 ```
 from queue_manager import QManager
@@ -30,9 +31,13 @@ manager.add_to_queue(foo, ['a', 1, 'b', 2, 'c', 3])
 manager.add_to_queue(bar, ['a', 1, 'b', 2], name='Name')
 manager.add_to_queue(say_name, ['name', 'Sergey', 'sourname', 'Gavrilov'])
 ```
-## Launch workers
-For launch workers you need write comand with nomber of workers who will complete your jobs:
+## Run workers
+For run workers you need write comand with nomber of workers who will complete your jobs:
 ```
  workers 4
+```
+If you need delete queue from manager use:
+```
+ deletetasks <queue_name>
 ```
 And that's all! Enjoy!

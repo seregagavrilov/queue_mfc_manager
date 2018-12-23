@@ -3,14 +3,14 @@
 Simple queue manager for Redis.
 
 
-## Install
+## Installation
 
 Use pip:
 
 ```
 pip install queue_mfc_manager
 ```
-## Use                   
+## How to use                  
 You should create file name manager.py and create two necessary instance: "redis" and "manager". 
 Then you sholud add tasks to manager.
                   
